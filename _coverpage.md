@@ -10,6 +10,6 @@
 - <!--No statically built html files-->
 - <!--Multiple themes-->
 
-[GitHub](https://github.com/docsifyjs/docsify/)
+[GitHub](https://h-kirito.github.io/Hui/)
 [Get Started](README) 
 
