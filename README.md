@@ -1,5 +1,7 @@
-# Headline
+# Huige
 
-> An awesome project.
+> 欢迎大家来到我的博客！
 
-[>>新的页面](guide)
+>>这是整理好的学习笔记，希望能给您提供一点帮助！
+
+[>>新页面](/guide)
