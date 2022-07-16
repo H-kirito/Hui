@@ -7,7 +7,7 @@
 
 Java之父
 
-![logo](javaFather.png)
+![logo](javafather.png)
 
 ## 1.2 Java技术体系
 
