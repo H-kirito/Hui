@@ -20,3 +20,4 @@
 
 [Java对象](/back/java/javaObject)
 
+[Java类](/back/java/javaPublic)
