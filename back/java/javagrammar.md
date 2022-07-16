@@ -1,4 +1,5 @@
 # JAVA语法
+[<<Java](/back/java/README)
 
 ## 标识符
 

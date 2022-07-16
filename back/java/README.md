@@ -1,5 +1,5 @@
 # Java
-[>>新的页面](javagrammar)
+[>>Java语法](/back/java/javagrammar)
 
 ## 1.1 java语言发展过程
 
