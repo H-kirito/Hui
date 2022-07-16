@@ -1,5 +1,5 @@
 # JavaDeBug
-[Java](/back/javaREADME)
+[Java](/back/java/README)
 
 ## DeBug
 

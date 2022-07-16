@@ -1,5 +1,5 @@
 # Java概述
-[Java](/back/javaREADME)
+[Java](/back/java/README)
 
 ## 1.1 java语言发展过程
 

@@ -1,5 +1,5 @@
 # JavaArraysTools
-[Java](/back/javaREADME)
+[Java](/back/java/README)
 
 ## "遍历"数组的方法
 

@@ -1,5 +1,5 @@
 # Java数组
-[Java](/back/javaREADME)
+[Java](/back/java/README)
 
 ## 数组创建
 

@@ -1,5 +1,5 @@
 # Java循环
-[Java](/back/javaREADME)
+[Java](/back/javaR/EADME)
 
 循环结构语句
 
