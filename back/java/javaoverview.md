@@ -10,12 +10,14 @@ Java之父
 ![logo](javaFather.png)
 
 ## 1.2 Java技术体系
+
 1. Java Caard
 2. Java ME
 3. JavaSE
 4. JavaEE
 
 ## 1.3 Java语言特点
+
 1. 简单性
 2. 安全性
 3. 面向对象
