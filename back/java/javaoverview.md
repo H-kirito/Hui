@@ -1,5 +1,5 @@
 # Java概述
-[<<Java](/back/java/README)
+[Java](/back/javaREADME)
 
 ## 1.1 java语言发展过程
 
@@ -7,7 +7,7 @@
 
 Java之父
 
-![logo](javafather.png)
+![logo](javaFather.png)
 
 ## 1.2 Java技术体系
 1. Java Caard
