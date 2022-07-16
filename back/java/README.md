@@ -1,23 +1,39 @@
 # Java
 
-[Java概述](/back/java/javaOverview)
+[概述](/back/java/javaOverview)
 
-[Java语法](/back/java/javaGrammar)
+[语法](/back/java/javaGrammar)
 
-[Java流程语句](/back/java/javaStatement)
+[流程语句](/back/java/javaStatement)
 
-[Java循环](/back/java/javaCirculate)
+[循环](/back/java/javaCirculate)
 
-[Java方法](/back/java/javaMethod)
+[方法](/back/java/javaMethod)
 
-[Java数组](/back/java/javaArray)
+[数组](/back/java/javaArray)
 
-[JavaDeBug](/back/java/javaDeBug)
+[DeBug](/back/java/javaDeBug)
 
-[JavaArrays工具类](/back/java/javaArraysTools)
+[Arrays工具类](/back/java/javaArraysTools)
 
-[Java二维数组](/back/java/javaTwoDiArray)
+[二维数组](/back/java/javaTwoDiArray)
 
-[Java对象](/back/java/javaObject)
+[对象](/back/java/javaObject)
 
-[Java类](/back/java/javaPublic)
+[类](/back/java/javaPublic)
+
+[封装]
+
+[Getter&&Setter]
+
+[抽象]
+
+[耦合度]
+
+[构造器]
+
+[重载]
+
+[封装]
+
+[继承](/back/java/javaInherit)
