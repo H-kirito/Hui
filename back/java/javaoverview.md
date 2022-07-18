@@ -11,7 +11,7 @@ Java之父
 
 ## 1.2 Java技术体系
 
-1. Java Caard
+1. Java Card
 2. Java ME
 3. JavaSE
 4. JavaEE

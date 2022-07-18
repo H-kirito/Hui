@@ -22,7 +22,7 @@
 
 ## [类](/back/java/javaPublic)
 
-## [封装]
+## [封装](/back/java/javaEncapsulation)
 
 ## [Getter&&Setter]
 
