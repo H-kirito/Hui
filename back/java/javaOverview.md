@@ -11,7 +11,11 @@ Java之父
 
 ## 1.2 Java技术体系
 
+<<<<<<< HEAD:back/java/javaoverview
 1. Java Card
+=======
+1. Java Caard
+>>>>>>> 4cead6e9a6abb5288772ff1511da93602c4df503:back/java/javaOverview
 2. Java ME
 3. JavaSE
 4. JavaEE

@@ -36,6 +36,10 @@
 
 ## [封装]
 
+<<<<<<< HEAD
 ## [继承](/back/java/javaInherit)
 
 []
+=======
+[继承](/back/java/javaInherit)
+>>>>>>> 4cead6e9a6abb5288772ff1511da93602c4df503
