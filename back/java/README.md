@@ -24,16 +24,13 @@
 
 ## [封装](/back/java/javaEncapsulation)
 
-## [Getter&&Setter]
+## [Getter&&Setter](/back/java/javaGetSet)
 
-## [抽象]
+## [抽象](/back/java/javaAbstract)
 
-## [耦合度]
+## [耦合度](/back/java/javaCoupling)
 
-## [构造器]
-
-## [重载]
-
-## [封装]
+## [构造器](/back/java/javaConstructor)
 
 ## [继承](/back/java/javaInherit)
+
