@@ -793,41 +793,151 @@ Java 中，所有的类都直接或间接的继承自Object。
 
 同一个行为，在不同的条件下，有不同的效果
 
-## 18 接口
+# 18 接口
+
+java不支持多重继承，但是接口可以实现多重继承的效果
+
+从本质上讲，接口是一种特殊的抽象类  
+这种抽象类中只包含常量和方法的定义，而没有变量和方法的实现
+
+实现接口在类名后加implements 接口名...
+
+interface可以更进一步的来降低耦合度。
+
+## 18.1 接口特点
+
+>- 接口中所有成员变量默认是由public static final修饰的
+>- 接口中所有方法都默认是由public abstract修饰的
+>- 多个类（无关）可以实现一个接口
+>- 一个类可以实现多个接口（无关)
+>- 与继承关系类似，接口与实现类之间存在多态性
+>- 接口也可以继承另外的接口
+
+## 18.2 接口隔离原则
+
+将包含很多方法的大接口切割为多个少量且必要方法的小接口
+
+## 18.3 接口新语法
+
+>- 定义常量
+>- 默认方法
+>- 私有方法
+
+## 18.4 接口和抽象类的区别
+
+>- Interface  Abstart Class
+>- （合约）      （半成品）
+>- 松耦合       代码复用
+>- 易扩展
+>- what           how
+>- like x        is x
 
 
+# 19 泛型
+
+## 19.1 概述
+
+使用泛型后，我们能获得编译时的类型安全：
+（在程序编译期即能检测出来类型是否合乎要求）
+
+>- 在添加元素的时候，能确保只能添加指定类型的元素。
+>- 在获取元素时，也不再需要强制类型转换了。
+
+## 19.2 装箱与拆箱
+
+泛型参数只能使用引用类型，当我们需要操作基本类型时，需要使用基本类型的封装类型作为泛型参数。
+
+自动装箱就是Java自动将原始类型值转换成对应的对象
+
+比如将int的变量转换成Integer对象，这个过程叫做装箱
+反之将Integer对象转换成int类型值，这个过程叫做拆箱
 
 
-## 异常
+- 装箱：在添加元素的时候，基本类型会自动转换成该类型的封装类
+- 拆箱：而在获取的时候，封装类型会自动转换成该类型对应的基本类型
 
-## Throwable
+## 19.3 封装类
+
+基本数据类型    封装类
+int           lnteger
+byte           Byte
+char         Character
+short          Short
+long           Long
+float          Float
+double         Double
+boolean       Boolean
+
+# 20 常用类
+
+![logo]class1.png
+
+![logo]class2.png
+
+# 21 集合
+
+![logo]gather.png
+
+# 22 异常
+
+## 22.1 Throwable
 
 >- getMessage()：返回此 throwable 的详细消息字符串
 >- toString()：获取异常类名和异常信息
 >- printStackTrace()：获取异常类名和异常信息，以及异常出现在程序中的位置
 >- printStackTrace(PrintStream s)：通常用该方法将异常内容保存在日志文件中，以便查阅
 
-## Exception 
+## 22.2 Exception 
 
-### RuntimeException
+### 22.2.1 RuntimeException
 
 不受检测的异常（不太严重的问题），就算有这种发生问题的可能性，既不要try-catch，也不要throws
 
-### 非RuntimeExcetion
+### 22.2.2 非RuntimeExcetion
 
 受检测的异常（较为严重的问题）
 
 >- 自己来处理，编写try-catch
 >- 自己不处理，在方法上添加throws xxException
 
-## Error
+## 22.3 Error
 
 程序猿无法解决的
 
-## 注意事项
+## 22.4 注意事项
 
 >- try 代码块越少越好
 >- try 代码块出现异常，则不会执行后续代码
 >- try-catch-finally finally修饰的代码块一定会执行
+>- 如果在finally中return，会发现会覆盖掉上面的return的结果
 >- 抛出异常的处理方法千万不能抛出给JVM处理[主方法]
 >- 一个方法抛出的是一个编译时异常,那么调用者必须处理
+
+## 22.5 throw和throws
+
+throw的是异常对象，而throws的是异常类
+
+### 22.5.1 区别
+
+>- throw抛出的是异常对象,throws声明的是异常类
+>- throw只能够抛出一个对象,throws可以声明多个异常类
+>- throw表示异常已经发生,throws是一种异常的可能性
+>- throw在方法体内出现,throws在方法的声明上
+
+# 23 IO流
+
+## 23.1 file
+
+表示磁盘中的文件和文件夹
+
+相对路径
+绝对路径
+
+file.mkdir() 创建文件夹
+file.delete() 删除
+file.getName() 获取文件的简单名称
+file.getTotalSpace() 获取文件大写
+file.listFiles() 获取当前文件夹下面的子文件信息
+file.getAnsolutePath() 获取文件的完整路径
+file.getParentFile() 获取父节点
+file.exists() 文件是否存在
