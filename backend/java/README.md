@@ -926,7 +926,7 @@ throw的是异常对象，而throws的是异常类
 
 # 23 IO流
 
-![logo]io.png
+![logo](io.png)
 
 ## 23.1 file
 
