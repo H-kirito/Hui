@@ -870,13 +870,13 @@ boolean       Boolean
 
 # 20 常用类
 
-![logo]class1.png
+![logo](class1.png)
 
-![logo]class2.png
+![logo](class2.png)
 
 # 21 集合
 
-![logo]gather.png
+![logo](gather.png)
 
 # 22 异常
 
@@ -943,3 +943,4 @@ file.listFiles() 获取当前文件夹下面的子文件信息
 file.getAnsolutePath() 获取文件的完整路径
 file.getParentFile() 获取父节点
 file.exists() 文件是否存在
+
