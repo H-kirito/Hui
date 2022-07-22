@@ -926,6 +926,8 @@ throw的是异常对象，而throws的是异常类
 
 # 23 IO流
 
+![logo]io.png
+
 ## 23.1 file
 
 表示磁盘中的文件和文件夹
