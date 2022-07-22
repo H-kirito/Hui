@@ -795,3 +795,37 @@ Java 中，所有的类都直接或间接的继承自Object。
 
 ## 18 接口
 
+
+
+
+## 异常
+
+## Throwable
+
+>- getMessage()：返回此 throwable 的详细消息字符串
+>- toString()：获取异常类名和异常信息
+>- printStackTrace()：获取异常类名和异常信息，以及异常出现在程序中的位置
+>- printStackTrace(PrintStream s)：通常用该方法将异常内容保存在日志文件中，以便查阅
+
+## Exception 
+
+### RuntimeException
+
+不受检测的异常（不太严重的问题），就算有这种发生问题的可能性，既不要try-catch，也不要throws
+
+### 非RuntimeExcetion
+
+受检测的异常（较为严重的问题）
+
+>- 自己来处理，编写try-catch
+>- 自己不处理，在方法上添加throws xxException
+
+## Error
+
+程序猿无法解决的
+
+## 注意事项
+
+>- try 代码块越少越好
+>- try 代码块出现异常，则不会执行后续代码
+>- try-catch-finally finally修饰的代码块一定会执行
