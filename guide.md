@@ -64,11 +64,11 @@ public static void randomString() {
 
 ## io流
 
->- (字节流)利用FilelnputStream和FileOutputStream，完成下面的要求∶
->- 1、用FileOutputStream在当前目录下创建一个文件“test.txt”，
->- 并向文件输出“Hello World”，如果文件已存在，则在原有文件内容后面追加
->- 2、用FilelnputStream读入test.txt文件，并在控制台上打印出test.txt 中的内容
->- 3、要求用try-catch-finally处理异常，并且关闭流应放在finally块中
+> (字节流)利用FilelnputStream和FileOutputStream，完成下面的要求∶
+> 1、用FileOutputStream在当前目录下创建一个文件“test.txt”，
+> 并向文件输出“Hello World”，如果文件已存在，则在原有文件内容后面追加
+> 2、用FilelnputStream读入test.txt文件，并在控制台上打印出test.txt 中的内容
+> 3、要求用try-catch-finally处理异常，并且关闭流应放在finally块中
 
 ~~~java
 import java.io.*;
@@ -100,9 +100,9 @@ public class FileInOutputStream {
 
 ### 约瑟夫环问题
 
->- 有80个⼩朋友⼿拉⼿围成⼀圈，由第⼀个⼩朋友开始从1开始数,
->- 数到3的⼩朋友退出，再从后⾯的⼩朋友从1数起,
->- 数到3的再退出，以此游戏下去，问最后剩下哪个⼩朋友？(使⽤集合实现)
+> 有80个⼩朋友⼿拉⼿围成⼀圈，由第⼀个⼩朋友开始从1开始数,
+> 数到3的⼩朋友退出，再从后⾯的⼩朋友从1数起,
+>m 数到3的再退出，以此游戏下去，问最后剩下哪个⼩朋友？(使⽤集合实现)
 
 ~~~java
 package main.com.hui.game;
