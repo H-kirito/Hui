@@ -967,7 +967,14 @@ file.getAnsolutePath() 获取文件的完整路径
 file.getParentFile() 获取父节点
 file.exists() 文件是否存在
 
-## 序列化和反序列化
+## 23.2 对象流
+对象流： ObjectOutputStream / ObjectInputStream
+
+>- 缓冲区功能
+>- 读写8种基本数据类型和字符串功能
+>- 读写对象的功能
+
+### 23.2.1 序列化和反序列化
 
 将对象拆解为基本的字节，将其保存在磁盘中或者借有网络编程发送出去
 序列化就是将数据拆解为字节
@@ -975,10 +982,44 @@ file.exists() 文件是否存在
 
 被读写的对象，本身需要实现java.io.Serializable(serialVersionUID=>MD5)
 
-# 网络编程
+## 23.3 数据流
+DataInputStream和DataOutputStream 是过滤流
+封装了对基本数据类型、String的读和写的操作⽅法与对象流⼀致
 
-网络架构
-TCP/IP 在第几层
+## 23.4 字符流
+
+Reader：字符输⼊流
+
+public int read(){}
+public int read(char[] c){}
+public int read(char[] b,int off,int len){}
+
+Writer：字符输出流
+
+public void write(int n){}
+public void write(String str){}
+public void write(String str,int offset,int len){}
+public void write(char[] c){}
+public void write(char[] c,int offset,int len){}
+
+FileReader ⽂件字符输⼊流 
+
+FileWriter ⽂件字符输出流
+
+字符缓冲流：BufferedWriter / BufferedReader
+
+转换流：InputStreamReader / OutputStreamWriter
+
+>- 可将字节流转换为字符流
+>- 可设置字符的编码⽅式。
+
+# 24 网络编程
+
+⽹络互联的七层框架（物理层、数据链路层、⽹络层、传输层、会话层、表示层和应用层）
+TCP/UDP 在传输层
+IP 在网络层
+
+基于TCP/IP的参考模型将协议分成四个层次（网络接口层、网络层、传输层、应用层）
 
 TCP/UDP
 TCP 安全，效率低
@@ -986,17 +1027,20 @@ UDP 不安全，效率高
 
 OkHttp3开源框架
 
-# 多线程（不确定性）
+# 25 多线程
+
+多线程具有不确定性
+
 进程、线程、时间片、调度、资源争夺
 
-## 进程
+## 25.1 进程
 
 在一个应用程序运行期间，它所申请的资源（硬件，软件）的总和，它的内存中划定的一定区域，而且是当前应用程序所“独占”的
 
 >- 当一个应用程序的功能足够复杂时，它可能会由多个进程组成，每一个进程都会承担或者提供相应的一项功能
 
 
-## 线程
+## 25.2 线程
 
 >- Thread 线程：“是一个轻量级的进程”，一个进程是由多个线程组成的，同时，线程又是CPU的最基本的调度单位
 
@@ -1006,3 +1050,48 @@ OkHttp3开源框架
 3、编写匿名内部类（lambda表达式），更加灵活，不用创建一个类，唯一的缺点是无法被重用（没有类名）
 
 通过Thread.sheep(毫秒数)放慢时间，模拟多线程运行效果
+
+并发带来线程不安全的问题
+解决方案：
+1、在修改被争抢的资源方法上新增一个synchronized(同步)
+效果：会让该方法变成原子性的一个操作(不能再切割的)，也就是说，当一个线程在里面执行，还没有执行完毕的时候，其它要调用这个方法的线程会一直被阻塞在外面
+
+工作原理：
+1、当一个类的方法，只要有一个被加了sync修饰，那么JVM就会创建出一个类似于lock的对象，我们称之为monitor(监视器)
+2、当有任何一个线程想要访问带有sync的方法时，JVM的调度器就会询问自己一个问题：monitor是否可以获取到
+    - Y 当前线程就会拿到该monitor，然后进去执行该方法
+    - N 当前线程就会被阻塞在方法外
+3、当某一个线程执行完逻辑以后，它会把monitor归还给调度器
+4、补充说明：被争抢的资源，一般来说只有一个，因此，JVM为它创建的monitor也只有一个，而且它是用来限定当前这个类的唯一的这个实例中所有的sync修饰的方法的
+
+## 25.3 高并发编程
+
+### 25.3.1 线程池
+创建单独的线程需要消耗一定的系统资源，因此线程的数量在一定时间是有限的
+
+从JDK 5开始，提供了线程池（Thread Pool）来解决这个问题。
+线程池，就是存放多个线程的一个容器，这里面的线程可以反复使用。
+
+Executors service = Executors.newFixedThreadPool(size);//size为创建线程个数
+
+### 25.3.2 异步编程
+asynchronous(异步化处理)
+
+CompletableFuture
+Asynchronous API
+异步链
+异常处理
+转换返回结果
+Compose组合
+Combine结果组合
+多任务等待
+超时任务
+
+# 集合
+
+# Lambda表达式&函数接口
+
+#  Stream
+
+>- Imperative Programming：命令式编程，用具体的指令告诉程序具体怎么做（how），在程序中，我们需要明确描述算法。
+>- Declarative Programming：声明式编程，与命令式编程相对立，它描述目标的性质，让程序明白目标，而非流程。（what）
