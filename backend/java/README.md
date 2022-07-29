@@ -1066,6 +1066,12 @@ OkHttp3开源框架
 3、当某一个线程执行完逻辑以后，它会把monitor归还给调度器
 4、补充说明：被争抢的资源，一般来说只有一个，因此，JVM为它创建的monitor也只有一个，而且它是用来限定当前这个类的唯一的这个实例中所有的sync修饰的方法的
 
+### 25.2.1 生命周期
+
+在Java中，线程的生命周期有六种状态，分别是：新键NEW,就绪RUNNABLE、阻塞BLOCKED、等待WAITING、超时等待TIMED_WAITING、终止Terminated。Java中将操作系统中断休眠状态分为了三种状态，也就是：BLOCKED、WAITING、TIMED_WAITING。只要 Java 线程处于这三种状态之一，那么这个线程就永远没有 CPU 的使用权。
+
+![logo](xiancheng.jpg)
+
 ## 25.3 高并发编程
 
 ### 25.3.1 线程池
